@@ -14,7 +14,6 @@ public class SecondTask {
         int choice = sc.nextInt();
         System.out.println("Введите сумму:");
         double amount = sc.nextDouble();
-        // convert the amount
         switch (choice) {
             case 1:
                 System.out.println(amount + " Ruble = " + (amount * 0.010282) + " Dollar");
