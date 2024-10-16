@@ -11,7 +11,7 @@ public class FirstTask {
         
         var x = List.of("else", "live", "dog", "yoga");
         ArrayList<Integer> arrayList = new ArrayList<>();
-        var lives = 5;
+        int lives = 5;
 
         Random randomizer = new Random();
         String random = x.get(randomizer.nextInt(x.size()));
