@@ -1,1 +1,5 @@
-hello 2
+class FirstTask {
+    public static void main(String[] args) {
+        System.out.println("Hello VSCode!");
+    }
+}
