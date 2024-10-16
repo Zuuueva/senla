@@ -47,9 +47,7 @@ public class SecondTask {
                 System.out.println(amount + " Lyra = " + (amount * 0.207911) + " Yuan");
                 break;
             default:
-                System.out.println("Invalid choice");
+                System.out.println("Некорректное значение");
         }      
-        
     }
-
 }
