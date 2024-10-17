@@ -6,10 +6,34 @@ public class SecondTask {
     public static void main(String[] args) {
         System.out.println("1 Ruble" + "\n2 Dollar" + "\n3 Euro" + "\n4 Yuan" + "\n5 Lyra");
         Scanner sc = new Scanner(System.in);
-        System. out.println("Выберите валюту:");
-        int choice = sc.nextInt();
-        System.out.println("Введите сумму (через запятую):");
-        double amount = sc.nextDouble();
+        System.out.println("Выберите валюту:");
+        int choice = 0;
+
+        if (sc.hasNextInt()) {
+            choice = sc.nextInt();
+            System.out.println("Спасибо! Вы ввели число " + choice);
+            if(choice < 1 || choice > 5){
+                System.out.println("К сожалению, такой позиции нет.");
+                return;
+            }
+        } 
+        else {
+            System.out.println("Извините, но это явно не число. Перезапустите программу и попробуйте снова!");
+            return;
+        }
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Введите сумму:");
+        double amount = 0.0;
+        if (s.hasNextDouble()) {
+            amount = s.nextDouble();
+            System.out.println("Спасибо! Вы ввели число " + amount);
+        } 
+        else {
+            System.out.println("Извините, но это явно не число. Перезапустите программу и попробуйте снова!");
+            return;
+        }
+        
         switch (choice) {
             case 1:
                 System.out.println("Производим конвертацию...");
