@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class FirstTask {
     public static void main(String[] args) {
-        System.out.println("Игра Виселица началаѝь! У Вас есть 5 жизней.");
+        System.out.println("Игра Виселица началась! У Вас есть 5 жизней.");
         
         var x = List.of("else", "live", "dog", "yoga");
         ArrayList<Integer> arrayList = new ArrayList<>();
@@ -15,11 +15,15 @@ public class FirstTask {
 
         Random randomizer = new Random();
         String random = x.get(randomizer.nextInt(x.size()));
-        //System.out.println(random);
+        String sk = "";
+        for(int i = 0; i < random.length(); i++){
+            sk = sk + "_";
+        }
+        System.out.println(sk);
         
-        while(lives > 0 && arrayList.size() < x.size()){
+        while(lives > 0 && arrayList.size() < random.length()){
             System.out.println("Введите букву:");
-            Scanner s = new Scanner(System.in, "UTF-8");
+            Scanner s = new Scanner(System.in);
             char a = s.next().charAt(0);
             String sc = "";
             
@@ -33,7 +37,13 @@ public class FirstTask {
             }
             else{
                 lives--;
-                System.out.println("Неверно! Осталось " + lives + " жизней.");
+                if(Character.isLetter(a)){
+                    System.out.println("Неверно! Осталось " + lives + " жизней.");
+                }
+                else{
+                    System.out.println("Введите, пожалуйста, букву!");
+                    System.out.println("Осталось " + lives + " жизней.");
+                }
             }
             for(int t = 0; t < random.length(); t++){
                 if (arrayList.contains(t)){
