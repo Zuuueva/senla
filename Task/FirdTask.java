@@ -1,4 +1,4 @@
-package Task;    
+package task;    
 
 import java.security.SecureRandom;
 import java.util.Scanner;
