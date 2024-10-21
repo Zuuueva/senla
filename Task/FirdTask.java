@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class FirdTask {
     public static void main(String[] args) {
         System.out.println("Введите длину пароля от 8 до 12 символов:");
-            Scanner s = new Scanner(System.in);
-            //int length = s.nextInt();
+        Scanner s = new Scanner(System.in);
         int choice = 0;
         
         if (s.hasNextInt()) {
